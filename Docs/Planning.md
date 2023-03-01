@@ -17,7 +17,7 @@ Each iteration consists of stages. We can't predict how long each stage will tak
 
 This project is the first project, where we timeline is tracked, so we just complete each stage as fast as possible with correctly working outcome.
 
-### Initial iteration
+## Initial iteration
 
 |Stage|
 |-----|
@@ -43,7 +43,7 @@ New tasks may dependend on previous tasks.
 |Write non-functional requirements|--:--:--|
 |`// TODO: Write all tasks here`|--:--:--|
 
-### Next iteration
+## Next iteration
 
 ```JS
 // TODO: Write next iteration stages.
