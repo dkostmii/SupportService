@@ -40,7 +40,7 @@ New tasks may dependend on previous tasks.
 |Tasks|Elapsed|
 |-----|-------|
 |Write functional requirements|1:16:38|
-|Write non-functional requirements|--:--:--|
+|Write non-functional requirements|1:22:33|
 |`// TODO: Write all tasks here`|--:--:--|
 
 ## Next iteration
