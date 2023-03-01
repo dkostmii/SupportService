@@ -86,6 +86,105 @@ Requirements are broken into use-case roles.
 
 ## Non-functional requirements
 
-```JS
-// TODO: Write non-functional requirements here
-```
+- Platform specification
+
+  |Component|Technology|
+  |---------|----------|
+  |Database instance|MSSQL Express|
+  |API Services|ASP.Net|
+  |API-DB communication|Entity Framework Core|
+  |Frontend application|Webpack|
+
+- Database strategy
+
+  Code-first approach
+
+- Toolset
+
+  - Visual Studio 2022
+  - VS Code
+  - dotnet CLI
+  - Swagger
+  - Docker Desktop
+  - Figma
+  - C#, JavaScript, SASS, SVG
+
+- Authentication spec
+
+  - JWT token
+  - claims: `email`, `phone` (if present)
+  - roles: `user role`
+  - password: hashed + salted, resalted at each login
+
+- Authorization priority
+
+  - valid token
+  - user role
+
+- Domain constraints
+
+  |User roles|
+  |:--------:|
+  |Client|
+  |Manager|
+  |Admin|
+  |Root admin|
+
+  |User credentials|
+  |:--------------:|
+  |First name|
+  |Last name<br />(optional for Client role)|
+  |Email|
+  |Phone number<br />(optional for Client role)|
+  |Password|
+
+  |Support request categories|
+  |:------------------------:|
+  |Application related issue|
+  |Application improvement proposal|
+  |Advice|
+  |User account removal|
+
+  |Support request state|
+  |:-------------------:|
+  |Pending|
+  |Fullfilled|
+  |Canceled by client|
+
+  Constraints based on **Support request state**:
+
+  - Client can't cancel already fullfilled request.
+  - Client can update only pending requests without assigned manager.
+  - Client can submit feedback only after request is fullfilled.
+  - Manager can't fullfill canceled request.
+
+  |Support request state listing|Constraint|
+  |-----------------------------|----------|
+  |Pagination|5 per page|
+  |Sorting|By one of states / By date|
+  |Filtering|By additional message (fuzzy search), by categories|
+
+  |File attachment extension|File content-type|
+  |-------------------------|-----------------|
+  |`.jpg`, `.jpeg`, `.png`, `.heic`, `.heif`|`image/jpeg`, `image/png`, `image/heic`, `image/heif`|
+  |`.pdf`|`application/pdf`|
+  |`.doc`, `.docx`, `.odt`|`application/msword`, `application/vnd.openxmlformats-officedocument.wordprocessingml.document`, `application/vnd.oasis.opendocument.text`|
+  |`.xls`, `.xlsx`, `.ods`|`application/vnd.ms-excel`, `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`, `application/vnd.oasis.opendocument.spreadsheet`|
+  
+  |File|Constraint|
+  |----|----------|
+  |Image|2048px largest side, 10MB max|
+  |PDF|20MB max|
+  |Documents|10MB max|
+  |Spreadsheets|2MB max|
+
+  |Events|
+  |:----:|
+  |Support request created|
+
+  |Jobs|
+  |:--:|
+  |Assign support request to manager|
+  |Search for non-active managers|
+
+  Manager working time: 8:00 - 18:00
