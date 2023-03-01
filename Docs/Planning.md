@@ -37,11 +37,11 @@ For example, write Models for DAL on Entity Framework Core or migrate models fro
 
 New tasks may dependend on previous tasks.
 
-|Tasks|
-|-----|
-|Write functional requirements|
-|Write non-functional requirements|
-|`// TODO: Write all tasks here`|
+|Tasks|Elapsed|
+|-----|-------|
+|Write functional requirements|1:16:38|
+|Write non-functional requirements|--:--:--|
+|`// TODO: Write all tasks here`|--:--:--|
 
 ### Next iteration
 
