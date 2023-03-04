@@ -41,6 +41,7 @@ New tasks may dependend on previous tasks.
 |-----|-------|
 |Write functional requirements|1:16:38|
 |Write non-functional requirements|1:22:33|
+|Create simple use case of ASP.Net identity|--:--:--|
 |Specify password hashing algo in NFR|--:--:--|
 |Write EF Core models in Shared.DAL library|--:--:--|
 |Create AuthService and SupportService ASP.Net WebAPI projects|--:--:--|
