@@ -1,0 +1,17 @@
+@startuml CommunicationDataSpecs
+
+allowmixing
+
+actor "User agent" as ua
+
+json authServiceAuthResponse {
+    "code": "0123455",
+    "authToken": {
+        "token": "verylongtoken1234567890",
+        "validTo": "2023-03-07 23:59:00"
+    }
+}
+
+authServiceAuthResponse .up.> ua
+
+@enduml

@@ -69,7 +69,8 @@ Requirements are broken into use-case roles.
 
     - Read managers from Auth service
     - Auto-assign support request to first available manager
-    - Re-assign support request to next available manager, if it's not served some time
+    - Re-assign support request to next available manager,
+        if it's not served some time
 
     - CR client feedbacks
 
