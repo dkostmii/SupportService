@@ -52,7 +52,7 @@ New tasks may dependend on previous tasks.
 |Create simple use case of ASP.Net identity|15:16:44|
 |~~Specify password hashing algo in NFR~~ (using default impl)|--:--:--|
 |Write EF Core models in Shared.DAL library|01:29:00|
-|Create specs for communication between AuthService and SupportService ([result](./CommunicationSpecs.md))|--:--:--|
+|Create specs for communication between AuthService and SupportService ([result](./CommunicationSpecs.md))|01:46:00|
 |Create AuthService and SupportService ASP.Net WebAPI projects|--:--:--|
 |Add AuthDBContext and SupportDBContext to appropriate projects|--:--:--|
 |Migrate to same MSSQL Express DB instance|--:--:--|
