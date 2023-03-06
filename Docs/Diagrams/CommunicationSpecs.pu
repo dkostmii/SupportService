@@ -1,0 +1,26 @@
+@startuml CommunicationSpecs
+
+hide footbox
+
+actor "User agent" as ua
+
+participant "AuthSerivce" as authService
+participant "SupportService" as supportService
+
+ua -> supportService : Access authorized resource
+activate supportService
+supportService -> ua : Redirect to AuthService
+
+ua -> authService : Authentication request with claims
+authService -> ua : Auth token, single-use code
+activate authService
+
+ua -> supportService : single-use code
+supportService -> authService : single-use code
+authService -> supportService : Additional User agent info
+deactivate authService
+
+supportService -> ua : Response for authorized resource
+deactivate supportService
+
+@enduml

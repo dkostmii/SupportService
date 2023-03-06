@@ -13,5 +13,7 @@ This is the repository containing SupportService project.
 |[**Requirements specification**](./Docs/Requirements.md)|
 |[Functional requirements](./Docs/Requirements.md#functional-requirements)|
 |[Non-functional requirements](./Docs/Requirements.md#non-functional-requirements)|
+|[**AuthService and SupportService communication specifications**](./Docs/CommunicationSpecs.md)|
 
 ## Feel free to use your favourite code editor here😎
+
